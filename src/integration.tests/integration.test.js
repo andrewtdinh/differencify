@@ -1,4 +1,4 @@
-import Differencify from '../index';
+import Differencify from '../oldTests/index';
 
 const differencify = new Differencify({ debug: true });
 

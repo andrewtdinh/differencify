@@ -9,7 +9,7 @@
     "build": "babel src --source-maps --out-dir dist --ignore '**/*.test.js'",
     "build-docs": "mkdir -p docs && jsdoc2md src/*.js > docs/api.md",
     "pretest": "npm run lint",
-    "test": "jest --testPathIgnorePatterns integration.test",
+    "test": "jest --testPathPattern sm",
     "jest:integration": "jest --testPathPattern integration.test --config src/integration.tests/jest.config.js",
     "test:integration": "docker build -t differencify . && docker run --volume \"$(pwd)/src/integration.tests\":/differencify/src/integration.tests -t  differencify npm run jest:integration"
   },
@@ -64,7 +64,8 @@
       "^.+\\.js$": "babel-jest"
     },
     "testPathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/src/oldTests"
     ]
   },
   "engines": {

@@ -1,13 +1,13 @@
 import puppeteer from 'puppeteer';
 import recorder from 'mockeer';
 import Target from './target';
-import { globalConfig, testConfig } from './config/defaultConfigs';
-import functionToString from './helpers/functionToString';
+import { globalConfig, testConfig } from '../config/defaultConfigs';
+import functionToString from '../helpers/functionToString';
 import freezeImage from './freezeImage';
 import { sanitiseGlobalConfiguration } from './sanitiser';
-import jestMatchers from './utils/jestMatchers';
+import jestMatchers from '../utils/jestMatchers';
 import compareImage from './compareImage';
-import logger from './utils/logger';
+import logger from '../utils/logger';
 
 const mockMatcher = jest.fn(() => ({
   message: 'message',

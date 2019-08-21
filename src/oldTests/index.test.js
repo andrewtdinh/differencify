@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
-import chainProxy from './helpers/proxyChain';
+import chainProxy from '../helpers/proxyChain';
 import Differencify from './index';
-import logger from './utils/logger';
+import logger from '../utils/logger';
 import Target from './target';
 
 jest.mock('./target');

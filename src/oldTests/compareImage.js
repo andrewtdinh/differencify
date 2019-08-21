@@ -2,7 +2,7 @@ import Jimp from 'jimp';
 import path from 'path';
 import fs from 'fs';
 
-import logger from './utils/logger';
+import logger from '../utils/logger';
 import {
   getSnapshotsDir,
   getSnapshotPath,
@@ -10,7 +10,7 @@ import {
   getDiffPath,
   getCurrentImageDir,
   getCurrentImagePath,
-} from './utils/paths';
+} from '../utils/paths';
 
 const saveDiff = (diff, diffPath) => new Promise((resolve, reject) => {
   const cb = (error, obj) => {

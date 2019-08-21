@@ -1,11 +1,11 @@
 import puppeteer from 'puppeteer';
 import recorder from 'mockeer';
-import logger from './utils/logger';
-import jestMatchers from './utils/jestMatchers';
+import logger from '../utils/logger';
+import jestMatchers from '../utils/jestMatchers';
 import compareImage from './compareImage';
-import functionToString from './helpers/functionToString';
+import functionToString from '../helpers/functionToString';
 import freezeImage from './freezeImage';
-import { isFunc, handleAsyncFunc } from './helpers/functions';
+import { isFunc, handleAsyncFunc } from '../helpers/functions';
 
 export default class Target {
   constructor(browser, globalConfig, testConfig) {

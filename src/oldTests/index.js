@@ -1,8 +1,8 @@
 import puppeteer from 'puppeteer';
-import chain from './helpers/proxyChain';
+import chain from '../helpers/proxyChain';
 import { sanitiseGlobalConfiguration, sanitiseTestConfiguration } from './sanitiser';
 import Target from './target';
-import logger from './utils/logger';
+import logger from '../utils/logger';
 
 export default class Differencify {
   constructor(conf) {
