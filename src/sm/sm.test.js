@@ -1,17 +1,18 @@
-const Differencify = require("differencify");
-const differencify = new Differencify({ debug: true });
+import Differencify from '../oldTests/index';
+
+const differencify = new Differencify({ debug: true, headless: false });
 
 (async () => {
-  const result = await differencify
+  await differencify
     .init()
     .launch()
     .newPage()
     .setViewport({ width: 1600, height: 1200 })
-    .goto("https://demo.sightmachine.io")
+    .goto('https://demo.sightmachine.io')
     .waitFor(1000)
     .screenshot()
     .toMatchSnapshot()
-    .result(result => {
+    .result((result) => {
       console.log(result);
     })
     .close()
