@@ -277,3 +277,9 @@ Read [this article](https://medium.com/@nima.soroush.h/make-visual-regression-te
 Article about how to use [Differencify in Docker](https://medium.com/@nima.soroush.h/using-differencify-in-docker-and-ci-99e3d1ec057c)
 
 [Gist example](https://gist.github.com/NimaSoroush/28c3a5808af393610a33bd32d4c43911) with vanilla node
+---
+Andrew's Notes:
+
+Call the test suit with `npm test`.
+
+Abandoned because I did not feel it would be easy to integrate differencify into our current automation framework.  Also, this is a relatively small, recent github project that is not popular.  Also it seems we have to stop the automation everything with Ctrl+C.
